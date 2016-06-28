@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i_q3&lzm!t8s+d!q6$m3ix$&)&$3w2quyodq8$kd*lkq_)5)um'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'implantacia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'implantaciaDB',
+        'NAME': 'implantaciadb',
         'USER': 'auroch',
         'PASSWORD': 'iraklisparoli1995',
         'HOST': 'localhost',
@@ -129,7 +129,7 @@ EMAIL_USE_TLS = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = '/opt/myproject/static/'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
